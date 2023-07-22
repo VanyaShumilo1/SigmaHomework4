@@ -1,0 +1,49 @@
+.nav {
+    margin-top: 100px;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__links {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        color: $black;
+        font-size: 16px;
+        font-weight: 600;
+        transition: 0.3s all;
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: 5px solid $white;
+
+
+        &:hover {
+            border: 5px solid $green;
+            color: $green;
+        }
+    }
+
+    &__button {
+        background: $orange;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .progress {
+        width: 0%;
+        height: 6px;
+        background-color: #ff6347;
+        z-index: 3;
+        transition: 0.1s all;
+    }
+}
