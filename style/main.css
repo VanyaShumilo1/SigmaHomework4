@@ -46,7 +46,7 @@ h6 {
 
 .title {
   color: #212121;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-weight: 500;
 }
@@ -54,7 +54,7 @@ h6 {
 .subtitle {
   text-transform: uppercase;
   color: #646464;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.2px;
@@ -135,7 +135,7 @@ h6 {
   max-width: 630px;
 }
 .header .subtitle {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }
 .header .title {
   margin-top: 10px;

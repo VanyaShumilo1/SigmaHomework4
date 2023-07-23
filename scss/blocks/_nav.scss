@@ -48,7 +48,7 @@
     .progress {
         width: 0%;
         height: 6px;
-        background-color: #ff6347;
+        background-color: $red;
         z-index: 3;
         transition: 0.1s all;
     }
