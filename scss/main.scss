@@ -15,6 +15,10 @@ html,
     color: $grey;
 }
 
+body {
+    padding-bottom: 300px; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
+
 a {
     color: inherit;
     display: block;
@@ -67,3 +71,4 @@ h6 {
 @import 'blocks/button';
 @import 'blocks/nav';
 @import 'blocks/header';
+@import 'blocks/service';

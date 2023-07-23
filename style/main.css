@@ -12,6 +12,10 @@ html,
   color: #646464;
 }
 
+body {
+  padding-bottom: 300px;
+}
+
 a {
   color: inherit;
   display: block;
@@ -72,6 +76,26 @@ h6 {
   transition: 0.3s all;
 }
 .button:hover {
+  transform: scale(1.1);
+}
+
+.filter__button {
+  text-transform: uppercase;
+  background: #37806B;
+  padding: 5px 0;
+  width: 200px;
+  border-radius: 20px;
+  border: 5px solid #37806B;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s all;
+}
+.filter__button_active {
+  background: #FFF;
+  color: #37806B;
+}
+.filter__button:hover {
   transform: scale(1.1);
 }
 
@@ -149,4 +173,50 @@ h6 {
 }
 .header .button {
   margin-top: 50px;
+}
+
+.service {
+  margin-top: 220px;
+}
+.service .title {
+  margin-top: 5px;
+}
+.service__filter {
+  margin-top: 40px;
+  display: flex;
+  gap: 75px;
+}
+.service__posts {
+  display: flex;
+  gap: 30px;
+  margin-top: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.service__post {
+  border-radius: 60px 0px;
+  background: #FFF;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.14);
+  padding: 30px 40px 30px 100px;
+}
+.service__post__title {
+  max-width: 320px;
+  color: #212121;
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+}
+.service__post__title:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -60px;
+  width: 45px;
+  height: 35px;
+  display: block;
+  background: url(../../img/service/icon.svg);
+}
+.service__post__text {
+  max-width: 320px;
+  margin-top: 10px;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,52 @@
+.service {
+    margin-top: 220px;
+
+    .title {
+        margin-top: 5px;
+    }
+
+    &__filter {
+        margin-top: 40px;
+        display: flex;
+        gap: 75px;
+    }
+
+    &__posts {
+        display: flex;
+        gap: 30px;
+        margin-top: 100px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__post {
+        border-radius: 60px 0px;
+        background: $white;
+        box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.14);
+        padding: 30px 40px 30px 100px;
+
+        &__title {
+            max-width: 320px;
+            color: $black;
+            font-size: 24px;
+            font-weight: 700;
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: -60px;
+                width: 45px;
+                height: 35px;
+                display: block;
+                background: url(../../img/service/icon.svg);
+            }
+        }
+
+        &__text {
+            max-width: 320px;
+            margin-top: 10px;
+        }
+    }
+}

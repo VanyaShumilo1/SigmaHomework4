@@ -1,3 +1,4 @@
+//progress bar
 const progress = document.querySelector(".progress");
 
 const progressBar = () => {
@@ -8,4 +9,65 @@ const progressBar = () => {
 }
 
 window.addEventListener("scroll", progressBar);
+
+//service
+const filterButtons = document.querySelectorAll('.filter__button')
+const serviceFilter = document.querySelector('.service__filter')
+const servicePosts = document.querySelector('.service__posts')
+
+const getAllPosts = async () => {
+    const data = await fetch('https://jsonplaceholder.typicode.com/posts')
+    return data
+}
+
+const getPostsFromUser = async (id) => {
+    const data = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
+    return data
+}
+
+const getLastPosts = () => {
+    getAllPosts().then(posts => posts.json()).then(posts => {
+        for (let i = 1; i <= 3; i++) {
+            let post = posts.findLast(post => post.userId = i)
+            servicePosts.innerHTML += generatePost(post.title, post.body)
+        }
+    })
+}
+
+const generatePost = (title, text) => {
+    return `
+    <div class="service__post">
+        <h3 class="service__post__title">${title}</h3>
+        <div class="service__post__text">${text}</div>
+    </div>
+    `
+}
+
+getLastPosts()
+
+serviceFilter.addEventListener('click', (event) => {
+    if (event.target.tagName === 'BUTTON') {
+        servicePosts.innerHTML = ''
+        if (event.target.classList.contains('filter__button_active') && event.target.dataset.id !== 'all') {
+            getLastPosts()
+            event.target.classList.remove('filter__button_active')
+            filterButtons[0].classList.add('filter__button_active')
+        } else {
+            filterButtons.forEach((button) => {
+                button.classList.remove('filter__button_active')
+            })
+
+            if (event.target.dataset.id !== 'all') {
+                getPostsFromUser(event.target.dataset.id).then(posts => posts.json()).then(posts => {
+                    for (let i = 0; i < 5; i++) {
+                        servicePosts.innerHTML += generatePost(posts[i].title, posts[i].body)
+                    }
+                })
+            } else {
+                getLastPosts()
+            }
+            event.target.classList.add('filter__button_active')
+        }
+    }
+})
 
