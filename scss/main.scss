@@ -48,5 +48,22 @@ h6 {
     margin: 0 auto;
 }
 
+.title {
+    color: $black;
+    font-family: 'Poppins';
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    color: $grey;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+}
+
 @import 'blocks/button';
 @import 'blocks/nav';
+@import 'blocks/header';

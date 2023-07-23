@@ -1,0 +1,33 @@
+.header {
+    margin-top: 100px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content {
+        max-width: 630px;
+    }
+
+    .subtitle {
+        font-family: 'Open Sans';
+    }
+
+    .title {
+        margin-top: 10px;
+        font-size: 72px;
+        font-weight: 600;
+        line-height: 78px;
+    }
+
+    &__text {
+        margin-top: 25px;
+        line-height: 30px;
+    }
+
+    .button {
+        margin-top: 50px;
+    }
+}

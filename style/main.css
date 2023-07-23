@@ -44,6 +44,22 @@ h6 {
   margin: 0 auto;
 }
 
+.title {
+  color: #212121;
+  font-family: "Poppins";
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  color: #646464;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
 .button {
   border-radius: 20px 0px;
   background: #37806B;
@@ -53,10 +69,15 @@ h6 {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
+  transition: 0.3s all;
+}
+.button:hover {
+  transform: scale(1.1);
 }
 
 .nav {
   margin-top: 100px;
+  background: #FFF;
   position: sticky;
   top: 0;
   left: 0;
@@ -89,6 +110,10 @@ h6 {
   background: #CAA892;
   font-size: 16px;
   font-weight: 600;
+  transition: 0.3s all;
+}
+.nav__button:hover {
+  background: #37806B;
 }
 .nav .progress {
   width: 0%;
@@ -96,4 +121,32 @@ h6 {
   background-color: #ff6347;
   z-index: 3;
   transition: 0.1s all;
+}
+
+.header {
+  margin-top: 100px;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__content {
+  max-width: 630px;
+}
+.header .subtitle {
+  font-family: "Open Sans";
+}
+.header .title {
+  margin-top: 10px;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 78px;
+}
+.header__text {
+  margin-top: 25px;
+  line-height: 30px;
+}
+.header .button {
+  margin-top: 50px;
 }/*# sourceMappingURL=main.css.map */
