@@ -1,0 +1,37 @@
+.about {
+    margin-top: 450px;
+
+    .subtitle {
+        font-weight: 500;
+    }
+
+    .title {
+        margin-top: 59px;
+        line-height: 57px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        &_centered {
+            margin-top: 200px;
+            align-items: center;
+            .title {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    &__content {
+        max-width: 540px;
+    }
+
+    &__text {
+        margin-top: 10px;
+    }
+
+    .button {
+        margin-top: 40px;
+    }
+}

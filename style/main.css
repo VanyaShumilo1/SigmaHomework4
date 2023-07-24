@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600&family=Raleway:wght@500&display=swap");
+@keyframes loader {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
 html,
 * {
   padding: 0;
@@ -64,6 +72,75 @@ h6 {
   letter-spacing: -0.2px;
 }
 
+.mask {
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: 0.4s all;
+}
+
+.loader {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.element {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: #37806B;
+  animation: loader 1.2s linear infinite;
+}
+
+.element:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.element:nth-child(2) {
+  animation-delay: -0.4s;
+}
+
+.element:nth-child(3) {
+  animation-delay: -0.8s;
+}
+
+.element:nth-child(4) {
+  animation-delay: -0.4s;
+}
+
+.element:nth-child(5) {
+  animation-delay: -0.8s;
+}
+
+.element:nth-child(6) {
+  animation-delay: -1.2s;
+}
+
+.element:nth-child(7) {
+  animation-delay: -0.8s;
+}
+
+.element:nth-child(8) {
+  animation-delay: -1.2s;
+}
+
+.element:nth-child(9) {
+  animation-delay: -1.6s;
+}
+
+.hide {
+  opacity: 0;
+}
+
 .button {
   border-radius: 20px 0px;
   background: #37806B;
@@ -105,6 +182,7 @@ h6 {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 3;
 }
 .nav__wrapper {
   display: flex;
@@ -219,4 +297,35 @@ h6 {
 .service__post__text {
   max-width: 320px;
   margin-top: 10px;
+}
+
+.about {
+  margin-top: 450px;
+}
+.about .subtitle {
+  font-weight: 500;
+}
+.about .title {
+  margin-top: 59px;
+  line-height: 57px;
+}
+.about__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.about__wrapper_centered {
+  margin-top: 200px;
+  align-items: center;
+}
+.about__wrapper_centered .title {
+  margin-top: 10px;
+}
+.about__content {
+  max-width: 540px;
+}
+.about__text {
+  margin-top: 10px;
+}
+.about .button {
+  margin-top: 40px;
 }/*# sourceMappingURL=main.css.map */

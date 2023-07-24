@@ -1,3 +1,20 @@
+//loader
+const mask = document.querySelector('.mask')
+
+// window.addEventListener('load', () => {
+//     mask.classList.add('hide')
+//     setTimeout(() => {
+//         mask.remove()
+//     }, 400)
+// })
+
+// setTimeout(() => {
+//     mask.classList.add('hide')
+//     setTimeout(() => {
+//         mask.remove()
+//     }, 400)
+// }, 5000)
+
 //progress bar
 const progress = document.querySelector(".progress");
 
@@ -31,7 +48,7 @@ const getLastPosts = () => {
             let post = posts.findLast(post => post.userId = i)
             servicePosts.innerHTML += generatePost(post.title, post.body)
         }
-    })
+    }).catch((error) => console.log(error))
 }
 
 const generatePost = (title, text) => {
@@ -62,7 +79,7 @@ serviceFilter.addEventListener('click', (event) => {
                     for (let i = 0; i < 5; i++) {
                         servicePosts.innerHTML += generatePost(posts[i].title, posts[i].body)
                     }
-                })
+                }).catch((error) => console.log(error))
             } else {
                 getLastPosts()
             }
