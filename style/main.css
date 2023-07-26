@@ -227,7 +227,6 @@ h6 {
   height: 6px;
   background-color: #ff6347;
   z-index: 3;
-  transition: 0.1s all;
 }
 
 .header {
@@ -327,6 +326,15 @@ h6 {
 }
 .about__content {
   max-width: 540px;
+}
+.about__bigtext {
+  line-height: 87%;
+  font-size: 300px;
+  font-weight: 700;
+  background: url("../../img/about/textbg.png");
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 .about__text {
   margin-top: 10px;
