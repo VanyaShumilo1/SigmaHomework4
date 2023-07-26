@@ -1,0 +1,89 @@
+.testimonials {
+    margin-top: 133px;
+
+    .title,
+    .subtitle {
+        text-align: center;
+    }
+}
+
+.slider {
+    margin-top: 50px;
+    position: relative;
+
+    &__item {
+        width: 632px;
+        display: flex;
+        position: relative;
+        padding: 40px;
+
+        &_avatar {
+            transform: translateX(40px) translateY(50px);
+        }
+
+        &_content {
+            border-radius: 70px 0px;
+            background: $white;
+            box-shadow: 7px 7px 30px 5px rgba(66, 96, 84, 0.15);
+            width: 571px;
+            height: 226px;
+            padding: 40px 40px 60px 100px;
+            // position: relative;
+        }
+
+        &_name {
+            color: $black;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        &_job {
+            font-size: 16px;
+        }
+
+        &_text {
+            margin-top: 10px;
+        }
+
+        &_decore {
+            position: absolute;
+            top: 70px;
+            right: 70px;
+        }
+    }
+}
+
+.slick-list {
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.slick-track {
+    display: flex;
+}
+
+.slick-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    z-index: 10;
+    border-radius: 30px;
+    box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.30);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slick-arrow.slick-prev {
+    top: 0;
+    right: 80px;
+    background-color: $white;
+    background-image: url(../../img/testimonials/prev.svg);
+}
+
+.slick-arrow.slick-next {
+    top: 0;
+    right: 0;
+    background-color: $green;
+    background-image: url(../../img/testimonials/next.svg);
+}

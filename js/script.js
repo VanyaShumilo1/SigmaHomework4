@@ -1,5 +1,6 @@
 //loader
 const mask = document.querySelector('.mask')
+const main = document.querySelector('.main')
 
 // window.addEventListener('load', () => {
 //     mask.classList.add('hide')
@@ -8,12 +9,13 @@ const mask = document.querySelector('.mask')
 //     }, 400)
 // })
 
-// setTimeout(() => {
-//     mask.classList.add('hide')
-//     setTimeout(() => {
-//         mask.remove()
-//     }, 400)
-// }, 5000)
+setTimeout(() => {
+    main.classList.remove('hideMain')
+    mask.classList.add('hide')
+    setTimeout(() => {
+        mask.remove()
+    }, 400)
+}, 5000)
 
 //progress bar
 const progress = document.querySelector(".progress");
@@ -88,3 +90,7 @@ serviceFilter.addEventListener('click', (event) => {
     }
 })
 
+//slider
+$('.slider').slick({
+    slidesToShow: 2,
+})
