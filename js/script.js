@@ -132,12 +132,46 @@ const formButton = document.querySelector('.submitForm')
 const nameHelper = document.querySelector('.name-helper')
 const surnameHelper = document.querySelector('.surname-helper')
 const emailHelper = document.querySelector('.email-helper')
+const congratulationScreen = document.querySelector('.congratulation')
+const congratulationToday = document.querySelector('.today')
+const congratulationUser = document.querySelector('.user')
 
 const engRegex = /^[a-zA-Z]+$/
 const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
-const showCongratulation = () => {
-    
+const now = new Date(Date.now())
+const currentDay = now.getDate()
+const currentMonth = now.getMonth()
+const currentYear = now.getFullYear()
+
+console.log(currentMonth)
+
+const convertMonth = (num) => {
+    months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ]
+
+    return months[num]
+}
+
+const showCongratulation = (name, surname) => {
+    congratulationScreen.classList.add('show')
+    congratulationToday.innerText = `${currentDay} ${convertMonth(currentMonth)} ${currentYear}`
+    congratulationUser.innerText = `${name} ${surname}`
+    setTimeout(() => {
+        congratulationScreen.classList.remove('show')
+    }, 5000)
 }
 
 formButton.addEventListener('click', (event) => {
@@ -148,8 +182,8 @@ formButton.addEventListener('click', (event) => {
 
     if (engRegex.test(name) && engRegex.test(surname) && emailRegex.test(email)) {
 
-        if(name === 'Sigma') {
-            showCongratulation()
+        if (name.toLowerCase() === 'sigma') {
+            showCongratulation(name, surname)
         }
 
         localStorage.setItem('name', capitalize(name))
