@@ -543,4 +543,70 @@ h6 {
   margin-top: 45px;
   color: #FFF;
   font-weight: 400;
+}
+
+.contact {
+  margin-top: 80px;
+}
+.contact .title, .contact__text {
+  text-align: center;
+}
+.contact .line {
+  width: 461px;
+  height: 1px;
+  margin: 0 auto;
+  background: #C4C4C4;
+  margin-top: 37px;
+}
+.contact__text {
+  margin-top: 40px;
+}
+.contact .input {
+  border: 3px solid #EEE;
+  outline: none;
+  display: block;
+  border-radius: 20px 0px;
+  background: #EEE;
+  padding: 15px 0 15px 40px;
+  width: 100%;
+}
+.contact .input_email {
+  margin-top: 57px;
+}
+.contact .input_error {
+  border: 3px solid #ff6347;
+}
+.contact__form {
+  width: 772px;
+  margin: 40px auto 0 auto;
+  position: relative;
+}
+.contact__form .name-helper, .contact__form .surname-helper, .contact__form .email-helper {
+  font-size: 12px;
+  color: #ff6347;
+  position: absolute;
+  top: 65px;
+  width: 40%;
+  display: none;
+}
+.contact__form .email-helper {
+  position: static;
+  margin-top: 10px;
+}
+.contact__form .surname-helper {
+  right: 25px;
+}
+.contact__form .show-helper {
+  display: block;
+}
+.contact__form_wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+.contact__form .button {
+  display: block;
+  margin: 92px auto 0 auto;
+  padding: 18px 48px;
+  font-weight: 400;
 }/*# sourceMappingURL=main.css.map */

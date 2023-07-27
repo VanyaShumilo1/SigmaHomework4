@@ -114,3 +114,71 @@ const elements = document.querySelectorAll('.news__item')
 for (let elm of elements) {
     observer.observe(elm);
 }
+
+//form 
+const capitalize = (word) => {
+    word = word.toLowerCase()
+    const firsLetter = word[0].toUpperCase()
+    const otherLetters = word.substring(1)
+
+    return firsLetter + otherLetters
+}
+
+const form = document.querySelector('.contact__form')
+const nameInput = document.querySelector('.input_name')
+const surnameInput = document.querySelector('.input_surname')
+const emailInput = document.querySelector('.input_email')
+const formButton = document.querySelector('.submitForm')
+const nameHelper = document.querySelector('.name-helper')
+const surnameHelper = document.querySelector('.surname-helper')
+const emailHelper = document.querySelector('.email-helper')
+
+const engRegex = /^[a-zA-Z]+$/
+const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+const showCongratulation = () => {
+    
+}
+
+formButton.addEventListener('click', (event) => {
+    event.preventDefault()
+    const name = nameInput.value
+    const surname = surnameInput.value
+    const email = emailInput.value
+
+    if (engRegex.test(name) && engRegex.test(surname) && emailRegex.test(email)) {
+
+        if(name === 'Sigma') {
+            showCongratulation()
+        }
+
+        localStorage.setItem('name', capitalize(name))
+        localStorage.setItem('surname', capitalize(surname))
+        localStorage.setItem('email', email)
+        form.reset()
+    }
+
+    if (!engRegex.test(name)) {
+        nameInput.classList.add('input_error')
+        nameHelper.classList.add('show-helper')
+    } else {
+        nameInput.classList.remove('input_error')
+        nameHelper.classList.remove('show-helper')
+    }
+
+    if (!engRegex.test(surname)) {
+        surnameInput.classList.add('input_error')
+        surnameHelper.classList.add('show-helper')
+    } else {
+        surnameInput.classList.remove('input_error')
+        surnameHelper.classList.remove('show-helper')
+    }
+
+    if (!emailRegex.test(email)) {
+        emailInput.classList.add('input_error')
+        emailHelper.classList.add('show-helper')
+    } else {
+        emailInput.classList.remove('input_error')
+        emailHelper.classList.remove('show-helper')
+    }
+})
