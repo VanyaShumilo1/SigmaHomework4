@@ -94,3 +94,23 @@ serviceFilter.addEventListener('click', (event) => {
 $('.slider').slick({
     slidesToShow: 2,
 })
+
+//news
+const onEntry = (entry) => {
+    entry.forEach(change => {
+        if (change.isIntersecting) {
+            change.target.classList.add('news__item_visible')
+        } else {
+            change.target.classList.remove('news__item_visible')
+        }
+    })
+}
+
+const options = {
+    threshold: [0.5]
+}
+const observer = new IntersectionObserver(onEntry, options)
+const elements = document.querySelectorAll('.news__item')
+for (let elm of elements) {
+    observer.observe(elm);
+}

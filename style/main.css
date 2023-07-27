@@ -504,4 +504,43 @@ h6 {
   right: 0;
   background-color: #37806B;
   background-image: url(../../img/testimonials/next.svg);
+}
+
+.news {
+  margin-top: 200px;
+  background: #F8F8F8;
+  padding: 93px 0 120px 0;
+}
+.news .title,
+.news .subtitle {
+  text-align: center;
+}
+.news__wrapper {
+  margin-top: 82px;
+  display: flex;
+  gap: 130px;
+}
+.news__item {
+  transition: 0.5s all;
+  transform: translateY(100px);
+  opacity: 0;
+}
+.news__item_visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+.news__title {
+  margin-top: 42px;
+  color: #212121;
+  font-size: 30px;
+  font-weight: 600;
+}
+.news__text {
+  line-height: 28px;
+  margin-top: 20px;
+}
+.news .button {
+  margin-top: 45px;
+  color: #FFF;
+  font-weight: 400;
 }/*# sourceMappingURL=main.css.map */
