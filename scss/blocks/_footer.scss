@@ -2,6 +2,7 @@
     margin-top: 92px;
     padding: 100px 0 20px 0;
     background: $lightGrey;
+    position: relative;
 
     &__wrapper {
         // display: flex;
@@ -84,5 +85,12 @@
             display: inline;
             color: $green;
         }
+    }
+
+    .decore {
+        position: absolute;
+        left: 0;
+        top: -20%;
+        
     }
 }

@@ -1,5 +1,5 @@
 .service {
-    margin-top: 220px;
+    margin-top: 140px;
 
     .title {
         margin-top: 5px;
@@ -48,5 +48,10 @@
             max-width: 320px;
             margin-top: 10px;
         }
+    }
+    .decore__wrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 80px;
     }
 }

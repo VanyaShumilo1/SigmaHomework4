@@ -1,5 +1,5 @@
 .about {
-    margin-top: 450px;
+    margin-top: 140px;
 
     .subtitle {
         font-weight: 500;
@@ -15,7 +15,6 @@
         justify-content: space-between;
 
         &_centered {
-            margin-top: 200px;
             align-items: center;
 
             .title {
@@ -44,5 +43,9 @@
 
     .button {
         margin-top: 40px;
+    }
+
+    .decore {
+        margin-top: 75px;
     }
 }
