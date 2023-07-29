@@ -351,6 +351,24 @@ h6 {
   margin-top: 80px;
 }
 
+.userData .container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.userData .title {
+  text-align: center;
+}
+.userData__item {
+  display: flex;
+  margin: 0 auto;
+  width: 500px;
+}
+.userData__key, .userData__value {
+  width: 300px;
+  font-size: 24px;
+}
+
 .about {
   margin-top: 140px;
 }

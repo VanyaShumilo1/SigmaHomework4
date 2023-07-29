@@ -144,8 +144,6 @@ const currentDay = now.getDate()
 const currentMonth = now.getMonth()
 const currentYear = now.getFullYear()
 
-console.log(currentMonth)
-
 const convertMonth = (num) => {
     months = [
         "January",
@@ -181,6 +179,7 @@ formButton.addEventListener('click', (event) => {
     const email = emailInput.value
 
     if (engRegex.test(name) && engRegex.test(surname) && emailRegex.test(email)) {
+        alert("Success")
 
         if (name.toLowerCase() === 'sigma') {
             showCongratulation(name, surname)
@@ -221,3 +220,26 @@ formButton.addEventListener('click', (event) => {
 //footer
 const yearSpan = document.querySelector('.footer__year')
 yearSpan.innerText = now.getFullYear()
+
+
+//userData
+const ipNode = document.querySelector('.ip-value')
+const countryNode = document.querySelector('.country-value')
+const regionNode = document.querySelector('.region-value')
+const cityNode = document.querySelector('.city-value')
+const currencyNode = document.querySelector('.currency-value')
+const LOCATION_API_KEY = '83a03672d8dcba2b1afddc21b5f9405324a76c9427094b6ca2f8cdd7'
+const getUserData = () => {
+    const data = fetch(`https://api.ipdata.co?api-key=${LOCATION_API_KEY}`)
+        .then(data => data.json())
+        .then(data => {
+            ipNode.innerText = data.ip
+            countryNode.innerText = data.country_name
+            regionNode.innerText = data.region
+            cityNode.innerText = data.city
+            currencyNode.innerText = data.currency.name
+        })
+
+}
+
+getUserData()

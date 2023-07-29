@@ -1,0 +1,24 @@
+.userData {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    &__item {
+        display: flex;
+        margin: 0 auto;
+        width: 500px;
+        
+    }
+
+    &__key, &__value {
+        width: 300px;
+        font-size: 24px;
+    }
+}
