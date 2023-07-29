@@ -216,3 +216,8 @@ formButton.addEventListener('click', (event) => {
         emailHelper.classList.remove('show-helper')
     }
 })
+
+
+//footer
+const yearSpan = document.querySelector('.footer__year')
+yearSpan.innerText = now.getFullYear()
