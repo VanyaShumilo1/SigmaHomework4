@@ -253,6 +253,7 @@ h6 {
   height: 6px;
   background-color: #ff6347;
   z-index: 3;
+  transition: 0.1s all;
 }
 
 .header {
@@ -707,6 +708,10 @@ h6 {
   font-size: 18px;
   font-weight: 400;
   line-height: 40px;
+}
+.footer__address a {
+  display: inline;
+  color: #37806B;
 }
 .footer__list {
   margin-top: 30px;
