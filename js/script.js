@@ -239,7 +239,6 @@ const getUserData = () => {
             cityNode.innerText = data.city
             currencyNode.innerText = data.currency.name
         })
-
 }
 
 getUserData()
