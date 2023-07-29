@@ -328,6 +328,23 @@ h6 {
   max-width: 320px;
   margin-top: 10px;
 }
+.service__post_orange {
+  background: #CAA892;
+}
+.service__post_orange .service__post__title,
+.service__post_orange .service__post__text {
+  color: #FFF;
+}
+.service__post_orange .service__post__title:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -60px;
+  width: 45px;
+  height: 35px;
+  display: block;
+  background: url(../../img/service/iconWhite.png);
+}
 .service .decore__wrapper {
   display: flex;
   justify-content: flex-end;

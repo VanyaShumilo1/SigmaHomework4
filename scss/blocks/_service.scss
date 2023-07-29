@@ -48,7 +48,28 @@
             max-width: 320px;
             margin-top: 10px;
         }
+
+        &_orange {
+            background: $orange;
+
+            .service__post__title,
+            .service__post__text {
+                color: $white;
+            }
+
+            .service__post__title:before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: -60px;
+                width: 45px;
+                height: 35px;
+                display: block;
+                background: url(../../img/service/iconWhite.png);
+            }
+        }
     }
+
     .decore__wrapper {
         display: flex;
         justify-content: flex-end;

@@ -48,14 +48,14 @@ const getLastPosts = () => {
     getAllPosts().then(posts => posts.json()).then(posts => {
         for (let i = 1; i <= 3; i++) {
             let post = posts.findLast(post => post.userId = i)
-            servicePosts.innerHTML += generatePost(post.title, post.body)
+            servicePosts.innerHTML += generatePost(post.title, post.body, i)
         }
     }).catch((error) => console.log(error))
 }
 
-const generatePost = (title, text) => {
+const generatePost = (title, text, userId) => {
     return `
-    <div class="service__post">
+    <div class="service__post ${userId === 2 ? 'service__post_orange' : ''}">
         <h3 class="service__post__title">${title}</h3>
         <div class="service__post__text">${text}</div>
     </div>
@@ -79,7 +79,7 @@ serviceFilter.addEventListener('click', (event) => {
             if (event.target.dataset.id !== 'all') {
                 getPostsFromUser(event.target.dataset.id).then(posts => posts.json()).then(posts => {
                     for (let i = 0; i < 5; i++) {
-                        servicePosts.innerHTML += generatePost(posts[i].title, posts[i].body)
+                        servicePosts.innerHTML += generatePost(posts[i].title, posts[i].body, posts[i].userId)
                     }
                 }).catch((error) => console.log(error))
             } else {
