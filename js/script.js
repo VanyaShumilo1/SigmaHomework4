@@ -242,3 +242,37 @@ const getUserData = () => {
 }
 
 getUserData()
+
+//check user activity
+const afkButton = document.querySelector('.afk__button')
+const afkScreen = document.querySelector('.afk')
+let lastAction = Date.now()
+
+const updateLastAction = () => {
+    lastAction = Date.now()
+}
+
+const afkInterval = setInterval(() => {
+    if (Date.now() - lastAction > 60000) {
+        main.classList.add('hideMain')
+        afkScreen.classList.add('showAfk')
+        lastAction = Date.now()
+        const pressAfkButtonInterval = setInterval(() => {
+            afkButton.addEventListener('click', () => {
+                lastAction = Date.now()
+                clearInterval(pressAfkButtonInterval)
+                main.classList.remove('hideMain')
+                afkScreen.classList.remove('showAfk')
+            })
+            if (Date.now() - lastAction > 15000) {
+                window.close()
+                alert('close')
+            }
+        }, 1000)
+
+    }
+}, 1000);
+
+window.addEventListener('scroll', updateLastAction)
+window.addEventListener('focus', updateLastAction)
+window.addEventListener('mousemove', updateLastAction)

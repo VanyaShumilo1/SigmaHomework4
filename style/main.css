@@ -171,6 +171,33 @@ h6 {
   top: 0;
 }
 
+.afk {
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: 0.4s all;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.afk__text {
+  font-size: 100px;
+}
+
+.showAfk {
+  opacity: 1;
+}
+
 .button {
   border-radius: 20px 0px;
   background: #37806B;

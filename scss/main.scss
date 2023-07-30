@@ -2,6 +2,7 @@
 
 @import 'base/variables';
 @import 'base/animations';
+@import 'base/mixins';
 
 html,
 * {
@@ -71,6 +72,7 @@ h6 {
 
 @import 'blocks/loader';
 @import 'blocks/congratulation';
+@import 'blocks/afk';
 @import 'blocks/button';
 @import 'blocks/nav';
 @import 'blocks/header';
