@@ -185,9 +185,14 @@ formButton.addEventListener('click', (event) => {
             showCongratulation(name, surname)
         }
 
-        localStorage.setItem('name', capitalize(name))
-        localStorage.setItem('surname', capitalize(surname))
-        localStorage.setItem('email', email)
+        if (localStorage) {
+            localStorage.setItem('name', capitalize(name))
+            localStorage.setItem('surname', capitalize(surname))
+            localStorage.setItem('email', email)
+        } else {
+            alert('Your browser does not support localstorage')
+        }
+
         form.reset()
     }
 
