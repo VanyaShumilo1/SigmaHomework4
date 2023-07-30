@@ -9,13 +9,13 @@ const main = document.querySelector('.main')
 //     }, 400)
 // })
 
-// setTimeout(() => {
-//     main.classList.remove('hideMain')
-//     mask.classList.add('hide')
-//     setTimeout(() => {
-//         mask.remove()
-//     }, 400)
-// }, 5000)
+setTimeout(() => {
+    main.classList.remove('hideMain')
+    mask.classList.add('hide')
+    setTimeout(() => {
+        mask.remove()
+    }, 400)
+}, 5000)
 
 //progress bar
 const progress = document.querySelector(".progress");
